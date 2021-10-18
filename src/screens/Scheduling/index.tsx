@@ -16,6 +16,7 @@ import {
    Footer,
 } from './styles';
 import { Button } from '../../components/Button';
+import { Calendar } from '../../components/Calendar';
 
 
 export function Scheduling(){
@@ -56,7 +57,7 @@ export function Scheduling(){
         </Header>
 
         <Content>
-
+            <Calendar />
         </Content>
 
         <Footer>
