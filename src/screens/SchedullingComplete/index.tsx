@@ -1,6 +1,6 @@
 import React from 'react';
 import {useWindowDimensions} from 'react-native';
-
+import { ConfirmButton } from '../../components/ConfirmButton';
 import LogoSvg from '../../assets/logo_backgorund_gray.svg';
 import DoneSvg from '../../assets/done.svg';
 
@@ -9,7 +9,9 @@ import {
    Content,
    Title,
    Message,
+   Footer
 } from './styles';
+
 
 export function SchedullingComplete(){
     const { width } = useWindowDimensions();
@@ -29,6 +31,10 @@ export function SchedullingComplete(){
                     pegar o seu automóvel.
                 </Message>
             </Content>
+
+            <Footer>
+                <ConfirmButton title="OK"/>
+            </Footer>
 
         </Container>
     );
