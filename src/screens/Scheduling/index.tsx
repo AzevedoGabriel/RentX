@@ -3,6 +3,7 @@ import { BackButton } from '../../components/BackButton';
 import { useTheme } from 'styled-components';
 import { StatusBar } from 'react-native';
 import ArrowSvg from '../../assets/arrow.svg';
+import {useNavigation} from '@react-navigation/native';
 
 import {
    Container,
@@ -21,51 +22,58 @@ import { Calendar } from '../../components/Calendar';
 
 export function Scheduling(){
     const theme = useTheme();
-  return (
-    <Container>
-        <Header>.
-            <StatusBar
-                barStyle="light-content"
-                translucent
-                backgroundColor="transparent"
-            />
-            <BackButton 
-                onPress={() => {}}
-                color={theme.colors.shape}
-            />
 
-            <Title>
-                Escolha uma {'\n'}
-                data de início e {'\n'}
-                fim do aluguel
-            </Title>
+    const navigation = useNavigation();
 
-            <RentalPeriod>
-                <DateInfo>
-                    <DateTitle>DE</DateTitle>
-                    <DateValue selected={false}>25/03/2021</DateValue>
-                </DateInfo>
+    function handleConfirmRental(){
+      navigation.navigate('SchedullingDetails');
+     }
+    return (
+        <Container>
+            <Header>.
+                <StatusBar
+                    barStyle="light-content"
+                    translucent
+                    backgroundColor="transparent"
+                />
+                <BackButton 
+                    onPress={() => {}}
+                    color={theme.colors.shape}
+                />
 
-                <DateInfo>
-                    <DateTitle>Até</DateTitle>
-                    <DateValue selected={false}>27/03/2021</DateValue>
-                </DateInfo>
+                <Title>
+                    Escolha uma {'\n'}
+                    data de início e {'\n'}
+                    fim do aluguel
+                </Title>
 
-                <ArrowSvg />
-            </RentalPeriod>
+                <RentalPeriod>
+                    <DateInfo>
+                        <DateTitle>DE</DateTitle>
+                        <DateValue selected={false}>25/03/2021</DateValue>
+                    </DateInfo>
 
-        </Header>
+                    <DateInfo>
+                        <DateTitle>Até</DateTitle>
+                        <DateValue selected={false}>27/03/2021</DateValue>
+                    </DateInfo>
 
-        <Content>
-            <Calendar />
-        </Content>
+                    <ArrowSvg />
+                </RentalPeriod>
 
-        <Footer>
-            <Button 
-                title="Confirmar"
-            />
-        </Footer>
+            </Header>
 
-    </Container>
+            <Content>
+                <Calendar />
+            </Content>
+
+            <Footer>
+                <Button 
+                    title="Confirmar"
+                    onPress={handleConfirmRental}
+                />
+            </Footer>
+
+        </Container>
   );
 }

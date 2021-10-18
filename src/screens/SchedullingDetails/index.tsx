@@ -6,7 +6,7 @@ import { Acessory } from '../../components/Acessory';
 import { Button } from '../../components/Button';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { useTheme } from 'styled-components';
-
+import {useNavigation} from '@react-navigation/native';
 import speedSvg from '../../assets/speed.svg';
 import accelerationSvg from '../../assets/acceleration.svg';
 import forceSvg from '../../assets/force.svg';
@@ -43,6 +43,13 @@ import {
 
 export function SchedullingDetails(){
   const theme = useTheme();
+
+  const navigation = useNavigation();
+
+  function handleConfirmRental(){
+      navigation.navigate('SchedullingComplete');
+    }
+
   return (
     <Container>
         <Header>.
@@ -115,7 +122,7 @@ export function SchedullingDetails(){
         </Content>
 
         <Footer>
-          <Button title="Confirmar"/>
+          <Button color={theme.colors.sucess} title="Alugar agora" onPress={handleConfirmRental}/>
         </Footer>
         
     </Container>

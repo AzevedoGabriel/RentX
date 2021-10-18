@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
 import {
 
@@ -13,7 +15,7 @@ import {
 
 import {ThemeProvider} from 'styled-components';
 
-import { Scheduling } from './src/screens/Scheduling';
+import {Routes} from './src/routes';
 import AppLoading from 'expo-app-loading';
 import theme from './src/screens/styles/theme';
 
@@ -32,7 +34,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Scheduling />
+      <Routes />
     </ThemeProvider>
       
   );
