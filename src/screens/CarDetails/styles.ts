@@ -71,7 +71,6 @@ export const Price = styled.Text`
     font-size: ${RFValue(25)}px;
 `;
 
-export const AboutWrapper = styled.View``;
 
 export const About = styled.Text`
     font-family: ${({theme}) => theme.fonts.primary_400};
@@ -84,7 +83,7 @@ export const About = styled.Text`
     line-height: ${RFValue(25)}px; 
 `;
 
-export const Acessories = styled.View`
+export const Accessories = styled.View`
     width: 100%;
 
     flex-direction: row;
