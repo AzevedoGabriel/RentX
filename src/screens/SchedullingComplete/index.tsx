@@ -1,7 +1,7 @@
 import React from 'react';
 import {useWindowDimensions, StatusBar} from 'react-native';
 import { ConfirmButton } from '../../components/ConfirmButton';
-import LogoSvg from '../../assets/logo_backgorund_gray.svg';
+import LogoSvg from '../../assets/logo_background_gray.svg';
 import DoneSvg from '../../assets/done.svg';
 
 import {useNavigation} from '@react-navigation/native';

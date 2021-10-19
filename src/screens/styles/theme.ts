@@ -9,7 +9,7 @@ export default {
         text_detail: '#AEAEB3',
         title: '#47474D',
 
-        line: 'EBEBF0',
+        line: '#EBEBF0',
 
         main: '#DC1637',
         main_light: '#FDEDEF',
@@ -29,4 +29,3 @@ export default {
     }
 
 }
-// hehe

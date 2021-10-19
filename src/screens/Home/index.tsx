@@ -26,11 +26,11 @@ export function Home(){
         period: 'Ao Dia',
         price: 120,
     },
-    thumbnail: 'https://img2.gratispng.com/20180202/gzw/kisspng-2016-ferrari-488-spider-sports-car-luxury-vehicle-blue-ferrari-488-spider-car-5a740f6e14df79.1923682815175555660855.jpg',
+    thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4VqgSombn1o05qyORuawoOTJVE8nw4K6Nyg&usqp=CAU',
   }
 
   function handleCarDetails(){
-      navigation.navigate('CarDetails')
+      navigation.navigate('SchedullingDetails')
   }
 
   return (

@@ -13,7 +13,7 @@ interface Props {
 
 export function Acessory({
     name,
-    icon: Icon
+    icon: Icon,
 } : Props){
   return (
     <Container>

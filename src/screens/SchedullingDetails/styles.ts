@@ -76,7 +76,7 @@ export const Acessories = styled.View`
     width: 100%;
 
     flex-direction: row;
-    flex-wrap: wrap; // se nãoc ouber um lado a lado joga pra baixo
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: space-between;
 
